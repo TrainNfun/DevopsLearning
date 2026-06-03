@@ -1,8 +1,4 @@
-# FastAPI Note
-
-## Kiểu trên Python
-
-### Gợi ý kiểu trên Python
+# Gợi ý kiểu trên Python
 
 Python hỗ trợ các "gợi ý kiểu" (type hints) tùy chọn (còn được gọi là "chú thích kiểu" - type annotations).
 
@@ -10,9 +6,9 @@ Những chú thích kiểu đó là những cú pháp đặc biệt cho phép kh
 
 Các ví dụ bao gồm typehintsEx1.py.
 
-### Khai báo kiểu trên Python
+## Khai báo kiểu trên Python
 
-#### Các kiểu đơn giản
+### Các kiểu đơn giản
 
 Ta có thể sử dụng gợi ý kiểu trên tất cả các kiểu tiêu chuẩn của Python, ví dụ như:
 
@@ -23,7 +19,7 @@ Ta có thể sử dụng gợi ý kiểu trên tất cả các kiểu tiêu chu�
 
 Trong trường hợp đặc biệt mà ta cần khai báo một biến cho phép sử dụng tất cả các kiểu dữ liệu, ta có thể sử dụng thư viện `Any` từ module `typing`. Xem ví dụ tại typingmoduleEx.py.
 
-#### Các kiểu thông thường
+### Các kiểu thông thường
 
 Một số kiểu dữ liệu có thể nhận "tham số kiểu" (type parameters) trong dấu ngoặc vuông để định nghĩa kiểu bên trong của chúng, ví dụ như danh sách chuỗi sẽ được khai báo là `list[str]`.
 
@@ -43,13 +39,13 @@ Lưu ý ở kiểu `dict`, ta cần truyền 2 tham số kiểu cho nó và các
 
 Các ví dụ bao gồm typehintsEx2.py.
 
-#### Union
+### Union
 
 Có thể khai báo các biến với nhiều kiểu dữ liệu (ví dụ như `int` hay `str`). Để định nghĩa như thế ta sử dụng dấu gạch ngang (| - phép OR) để phân cách hai kiểu dữ liệu. Đây được gọi là "hợp" (union) vì biến có thể thuộc bất kỳ kiểu dữ liệu nào trong tập hợp của hai kiểu dữ liệu đó.
 
 Ví dụ được thực hiện tại typehintsEx3.py
 
-#### None
+### None
 
 Ta có thể sử dụng kiểu `None`, là một kiểu dữ liệu để định nghĩa một giá trị null hoặc không có giá trị nào.
 
@@ -73,7 +69,7 @@ Và ta cũng sẽ nhận được sự hỗ trợ của autocomplete editor. V�
 
 Có thể tham khảo ví dụ tại typehintsClassEx.py.
 
-### Pydantic
+## Pydantic
 
 Pydantic là một thư viện của Python để thực hiện xác thực dữ liệu. Ta có thể khai báo một "hình thù" của một dữ liệu như các lớp với các thuộc tính, mỗi thuộc tính sẽ có một kiểu. Sau đó ta tạo ra một thể hiện từ một lớp đó với một số giá trị và nó sẽ xác thực các giá trị đó và chuyển về kiểu phù hợp (nếu cần) và cho ta một đối tượng với tất cả các dữ liệu. Ta cũng được sự hỗ trợ từ autocomplete với đối tượng thu được từ kết quả.
 
@@ -81,7 +77,7 @@ Hiểu đơn giản Pydantic như là một người bảo vệ cho dữ liệu 
 
 Để hiểu hơn về ví dụ, tham khảo tại typehintsPydanticEx.py.
 
-### Gợi ý kiểu trong FastAPI
+## Gợi ý kiểu trong FastAPI
 
 FastAPI lợi dụng các điểm mạnh của việc gợi ý kiểu để thực hiện nhiều thứ.
 
