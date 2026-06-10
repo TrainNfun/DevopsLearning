@@ -104,7 +104,7 @@ CPU rất đa dụng, nó có thể học máy (tính toán các vector và ma t
 
 Các phiên bản hiện đại của Python có cách trực quan để định nghĩa mã bất đồng bộ. Làm cho nó trở thành một mã bình thường, tuần tự và làm "việc chờ đợi" cho chúng ta vào đúng thời điểm. Bây giờ ví dụ như sau:
 
-```
+```python
 from fastapi import FastAPI
 import asyncio
 import uvicorn
@@ -150,7 +150,7 @@ Nhưng tất cả chức năng sử dụng mã bất đồng bộ với `async` 
 
 Ví dụ một đoạn code sau:
 
-```
+```python
 import asyncio
 
 # Hàm bất đồng bộ này định nghĩa hàm Coroutine (như một blueprint)
@@ -180,7 +180,7 @@ Vậy các chi tiết chính ở đây mà ta cần lưu ý:
 
 + Khi ta gõ `my_coroutine = cook_burger(42)`, không có thứ gì được in ra từ nhà bếp cả, nó không nói "bắt đầu nấu burger" hay gì hết. Thay vào đó, Python gói lệnh gọi hàm vào một gói đặc biệt và chuyển nó cho ta. Khi ta in kiểu của nó, Python sẽ cho ta biết thông qua kết quả in như sau:
   
-  ```
+  ```bash
     Kiểu của biến là: <class 'coroutine'>
     Đối tượng thật là: <coroutine object cook_burger at 0x...>
   ```

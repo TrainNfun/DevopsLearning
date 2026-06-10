@@ -4,7 +4,7 @@ RESTful API là một tiêu chuẩn dùng trong việc thiết kế API cho các
 
 ## RESTful API hoạt động như thế nào?
 
-![RESTful API diagram](./data/images/RESTfulAPIdiagram.jpg)
+![RESTful API diagram](../data/images/RESTfulAPIdiagram.jpg)
 
 REST hoạt động chủ yếu dựa vào giao thức HTTP. Các hoạt động cơ bản nêu trên sẽ sử dụng những phương thức HTTP riêng.
 
@@ -27,7 +27,7 @@ Endpoint (điểm cuối) là một URL kết hợp với phương thức HTTP. 
 
 RESTful API không sử dụng session và cookie, nó sử dụng một `access_token` với mỗi yêu cầu. Dữ liệu trả về thường có cấu trúc như sau:
 
-```
+```json
 {
     "data" : {
         "id": "1",
