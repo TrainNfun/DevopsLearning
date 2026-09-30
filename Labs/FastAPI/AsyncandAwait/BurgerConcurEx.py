@@ -9,7 +9,7 @@ chuẩn bị thay đổi hướng nếu cần
 '''
 async def get_burgers(number: int):
     # Giả lập 2 giây đợi cho đến khi nấu xong
-    # từ khóa 'await' ở đây sẽ để Python thoát khỏi "vỉ nướng" trong 2 giây đó
+    # từ khóa 'await' ở đây sẽ để Python thoát khỏi trong 2 giây đó
     await asyncio.sleep(2)
     return "f{number} Fresh Burgers coming!"
 
@@ -17,7 +17,7 @@ async def get_burgers(number: int):
 # Hàm async ở đây cho phép "quầy" nhận nhiều thực đơn cùng một lúc
 @app.get('/burger')
 async def read_burgers():
-    # 'await' thực hiện toán vụ và ngừng thực đơn cụ thể này
+    # 'await' thực hiện tác vụ và ngừng thực đơn cụ thể này
     # Khi mà "vỉ nướng" bận 2 giây, Python chạy qua để "phục vụ" cho vị khách thứ hai
     burgers = await get_burgers(2)
 

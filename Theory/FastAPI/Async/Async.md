@@ -4,7 +4,7 @@ Các phiên bản Python hiện đại bây giờ hỗ trợ "mã bất đồng 
 
 ## Mã bất đồng bộ
 
-Mã bất đồng bộ đơn giản là một ngôn ngữ lập trình nói cho máy tính/chương trình ở một điểm nào đó trong đoạn code, nó phải đợi **một thứ nào đó hoàn thành tại nơi nào đó**. Hãy nói rằng thứ đó gọi là "slow-file". Máy tính lúc đó sẽ đi và hoàn thành công việc khác trong khi "slow-file" đó tự hoàn thành chính nó. Sau đó máy tính sẽ trở lại mỗi khi nó có cơ hội vì nó đang chờ đợi, hoặc khi nào nó hoàn thành tất cả công việc đang làm. Và nó sẽ kiểm tra xem có tác vụ nào nó đang chờ đã hoàn thành chưa, rồi tiếp tục thực hiện những việc cần làm. Tiếp theo, nó sẽ chọn tác vụ đầu tiên cần hoàn thành (ví dụ như "slow-file") và tiếp tục những việc cần làm với tác vụ đó.
+**Mã bất đồng bộ đơn giản là một ngôn ngữ lập trình nói cho máy tính/chương trình ở một điểm nào đó trong đoạn code, nó phải đợi một thứ nào đó hoàn thành tại nơi nào đó**. Hãy nói rằng thứ đó gọi là "slow-file". Máy tính lúc đó sẽ đi và hoàn thành công việc khác trong khi "slow-file" đó tự hoàn thành chính nó. Sau đó máy tính sẽ trở lại mỗi khi nó có cơ hội vì nó đang chờ đợi, hoặc khi nào nó hoàn thành tất cả công việc đang làm. Và nó sẽ kiểm tra xem có tác vụ nào nó đang chờ đã hoàn thành chưa, rồi tiếp tục thực hiện những việc cần làm. Tiếp theo, nó sẽ chọn tác vụ đầu tiên cần hoàn thành (ví dụ như "slow-file") và tiếp tục những việc cần làm với tác vụ đó.
 
 Việc chờ một thứ gì đó thường chỉ đến những thao tác nhập/xuất (I/O) tương đối chậm (so với tốc độ của bộ xử lý hoặc bộ nhớ RAM), như là:
 
@@ -16,7 +16,7 @@ Việc chờ một thứ gì đó thường chỉ đến những thao tác nhậ
 + Một thao tác CSDL cần hoàn tất.
 + Một truy vấn CSDL cần trả về kết quả.
 
-Thời gian thực thi được sử dụng hầu hết bởi việc chờ đợi thao tác I/O, ta gọi chúng là thao tác "vùng nhập/xuất" (I/O bound).
+**Thời gian thực thi được sử dụng hầu hết bởi việc chờ đợi thao tác I/O, ta gọi chúng là thao tác vùng nhập/xuất (I/O bound)**.
 
 Việc này được gọi là "bất đồng bộ" **vì máy tính/chương trình không cần phải "đồng bộ" với tác vụ chậm hơn, đợi đúng thời điểm mà chúng hoàn thành mà trong lúc đó không làm gì cả để có thể lấy kết quả từ tác vụ và tiếp tục công việc**.
 
